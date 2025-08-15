@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "AI-TEAM": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "path-to-this-project",
+        "run", 
+        "main.py"
+      ],
+      "env": {
+        "LLM_PROVIDER": "OpenAILike",
+        "DEEPSEEK_API_KEY": "your-api-key",
+        "DEEPSEEK_BASE_URL": "https://api.deepseek.com",
+        "OpenAILike_API_KEY": "your-api-key",
+        "OpenAILike_BASE_URL": "https://open.bigmodel.cn/api/paas/v4",
+        "OpenAILike_MODEL_ID": "glm-4.5",
+        "OpenAILike_AGENT_MODEL_ID": "glm-4.5",
+        "EXA_API_KEY": "your-api-key"
+      }
+    }
+  }
+}

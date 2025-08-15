@@ -1,0 +1,4 @@
+agno
+fastmcp
+filelock
+python-dotenv
