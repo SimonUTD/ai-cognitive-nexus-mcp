@@ -310,7 +310,7 @@ def list_teams() -> str:
         team_list.append({
             "team_key": key,
             "team_name": config.get("team_name"),
-            "status": "active" if is_active else "inactive (config error)"
+            "status": "active" if is_active else "inactive (config error)，请检查成员或环境参数设置，特别是exa_api_key参数不能缺少",
         })
     return json.dumps(team_list, indent=2, ensure_ascii=False)
 
@@ -347,7 +347,7 @@ def delete_team(team_key: str) -> str:
 @mcp.tool()
 async def run_ai_team(team_name: str, prompt: str, session_id: Optional[str] = None, persona_key: Optional[str] = None, product_key: Optional[str] = None) -> str:
     """
-    运行指定的AI团队。
+    运行指定的AI团队开展业务讨论。请注意这个环节需要耗费较长的时间，请告知用户耐心等待
     :param team_name: 要运行的团队的key。
     :param prompt: 本次任务的核心指令。
     :param session_id: (可选) 关联的会话ID，用于加载历史记录和保存结果。
